@@ -69,5 +69,9 @@ namespace NF.WJF.DAL
                 return t;
             });
         }
+        public int Text()
+        {
+            return 1;
+        }
     }
 }
