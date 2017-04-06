@@ -1,0 +1,19 @@
+﻿@model List<NF.WJF.Model.Product>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li class="item">
+            <a href="#">
+                <input type="hidden" name="ProductID" value=@item.ProductID />
+                <div class="pro">
+                    <img class="img" src=@item.Poster />
+                    <span class="name">@item.ProductName</span>
+                    <span class="price">¥@item.Price</span>
+                </div>
+            </a>
+        </li>
+    }
+</ul>
+
+
+

@@ -1,0 +1,46 @@
+﻿@model List<NF.WJF.Model.Product>
+@using NF.WJF.Model
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>商品信息</title>
+    <link href="~/css/ProducInfo.css" rel="stylesheet" />
+    <script src="~/Scripts/ProductInfo.js"></script>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="con">
+        
+            @foreach (var item in Model)
+            {
+                <div id="magnifier">
+                    <div class="pro" id="small_img">
+                        <img class="img" style="width:420px;height:420px;" src=@Url.Content("~/" + item.Poster) />
+                        <span class="float"></span>
+
+                    </div>
+                    <div class="big_img" style="display: none;">
+                        <img src="@Url.Content("~/" + item.Poster)" style="left: 0px; top: 0px;">
+                    </div>
+                </div>
+               <div class="info">
+                   <h1>@item.ProductName</h1>
+                   <p class="newp">韩版经典简约休闲女短裤</p>
+                   <p><span class="price">¥@item.Price</span></p>
+               </div>             
+            }        
+    </div>
+    <script type="text/javascript">
+       
+    </script>
+
+</body>
+</html>
